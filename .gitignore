@@ -1,0 +1,10 @@
+*.o
+*.lst
+*.map
+*.hex
+*.ihx
+*.s19
+*.elf
+*.a
+obj/*
+lib/*
