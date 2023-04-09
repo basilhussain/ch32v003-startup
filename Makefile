@@ -34,7 +34,7 @@ ifeq ($(CALL_SYSINIT),enabled)
 endif
 
 AR = $(TOOL_PREFIX)-ar
-AFLAGS = -r -s
+ARFLAGS = -r -s
 
 OD = $(TOOL_PREFIX)-objdump
 ODFLAGS = --disassemble-all --disassemble-zeroes
@@ -62,7 +62,7 @@ LIBRARY = $(LIBDIR)/ch32v00x_startup.a
 all: $(LIBRARY) $(LIBDIS)
 
 $(LIBRARY): $(LIBOBJ) | $(LIBDIR)
-	$(AR) $(AFLAGS) $@ $(LIBOBJ)
+	$(AR) $(ARFLAGS) $@ $(LIBOBJ)
 
 $(LIBDIS): $(LIBOBJ)
 
