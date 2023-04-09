@@ -56,9 +56,9 @@ It can be re-enabled by providing the appropriate build option.
 
 Run `make` in the code's root folder. The options described below may optionally be given as arguments to the `make` command.
 
-* `IRQ_HANDLERS=<common|discrete>`: Whether to have discrete default interrupt handlers (i.e. one handler per interrupt) or a single common handler for all interrupts.
-* `PFIC_HPE=<enabled|disabled>`: Whether to enable the hardware prologue/epilogue feature (HPE) of the PFIC.
-* `CALL_SYSINIT=<enabled|disabled>`: Whether to enable the pre-`main` call to the `SystemInit` function.
+* `IRQ_HANDLERS=<common|discrete>`: Whether to have discrete default interrupt handlers (i.e. one handler per interrupt) or a single common handler for all interrupts. Without this argument, default is common.
+* `PFIC_HPE=<enabled|disabled>`: Whether to enable the hardware prologue/epilogue feature (HPE) of the PFIC. Without this argument, default is disabled.
+* `CALL_SYSINIT=<enabled|disabled>`: Whether to enable the pre-`main` call to the `SystemInit` function. Without this argument, default is disabled.
 * `TOOL_PREFIX=<...>`: If the prefix of your RISC-V GCC toolchain executables is not `riscv-none-elf`, then specify the prefix string with this option.
 
 The output `.a` library file will be placed in the `lib` folder (which is created if it doesn't exist).
